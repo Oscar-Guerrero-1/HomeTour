@@ -1,6 +1,6 @@
 package game;
 // This is where the game-loop will go, where we'll display a prompt, collect input, and parse that input
-
+// This is the  Minimum Viable Product (MVP) of the HomeTour Project
 import java.util.Scanner;
 import fixtures.*;
 
@@ -48,74 +48,44 @@ public class Main {
 			if (nextRoom != null) {
 				currentRoom = nextRoom;
 			}
+			
+			/*
+			switch(input.trim().toLowerCase()) {
+			
+			case "south" :{
+				nextRoom = currentRoom.getSouthExit();
+				currentRoom = nextRoom;
+				break;
+				}
+			
+			case "north":{
+				nextRoom = currentRoom.getNorthExit();
+				currentRoom = nextRoom;
+				break;
+				}
+			
+			case "west" :{
+				nextRoom = currentRoom.getWestExit();
+				currentRoom = nextRoom;
+				break;
+				}
+			
+			case "east" :{
+				nextRoom = currentRoom.getEastExit();
+				currentRoom = nextRoom;
+				break;
+				}
+			
+			default:{
+				System.out.println("Please enter a valid direction.");
+				break;
+				}
+			} // end switch (x)
+			*/
+						
 		}
-		/*
-		//Collect input
-		collectInput();
-		//Process input as a command
-		
-		//Print output of command
-		parse(collectInput(),newPlayer);
-		
-		*/
 	}
 	
-	/*
-	// method will print a prompt to the console for the player's current room
-	private static void printRoom(Player player) {
-
-		RoomManager rm = new RoomManager();
-		rm.init();
-		// set current room to the starting room
-		Room currentRoom = rm.startingRoom;
-		System.out.println("The room you are in is the " + currentRoom);
-		
-	}
-	
-	// this method will use a Scanner object to collect console input from the user, 
-	 // and then will divide that input into a target and action part
-	// This method will break the input into a String[], and return that.
-	private static String collectInput() {
-		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("Where would you like to go? ");
-		String input = scan.nextLine();
-		
-		
-		String[] command = new String[] {input};
-		
-		//System.out.println(java.util.Arrays.toString(command));
-		
-		scan.close();
-		
-		return command;
-		
-	}
-	
-	
-	// method will take the output of the collectInput() method and a player object, and will resolve that command
-	private static void parse(String[] command, Player player) {
-	
-		
-		Room nextRoom = null;
-		switch(command.toString().toLowerCase()) {
-		case "north":
-			nextRoom = player.currentRoom.getLeftExit();
-			break;
-		case "south":
-			
-			break;
-		case "east":
-			
-			break;
-		case "west":
-			
-		break;
-		default:
-			System.out.println("Error"); 
-		} // end switch()
-		}*/
 }
 
 	
